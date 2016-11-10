@@ -9,7 +9,8 @@ xdata=data['X']
 ydata=data['y']
 # print ydata[0::,0],type(ydata[0::,0])
 M,N=xdata.shape
-iterm=np.random.randint(0,M-1,100)  #get random 100 rows
+# iterm=np.random.randint(0,M-1,100)  #get random 100 rows
+iterm=np.random.permutation(M)[0:100]
 rdata=xdata[iterm,0::]
 m,n=rdata.shape
 example_width = int(np.round(np.sqrt(n)))
