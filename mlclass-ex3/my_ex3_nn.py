@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 import scipy.io as scio
 import numpy as np
-import matplotlib.pyplot as plt
-from fmincg import *
+
 
 data1=scio.loadmat("ex3data1.mat")
 xdata=data1['X']
@@ -23,7 +22,8 @@ def predict(Theta1,Theta2,X):
 	a2=g(z2)
 	a2add=np.vstack([np.array([[1.0]*len(a2.T)]),a2])   #add a row
 	z3=np.dot(Theta2,a2add)
-	p=np.argmax(z3,axis=0)+1  #column maximum index
+	a3=g(z3)
+	p=np.argmax(a3,axis=0)+1  #column maximum index
 	return p
 
 r=predict(theta1,theta2,Xdata)
