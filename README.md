@@ -1,4 +1,4 @@
 #Machine Learning
-The code here is for Stanford-Machine-Learning class teached by .
+The code here is for Stanford-Machine-Learning class teached by Andrew Ng.
 And it is written in python. It is my first time to upload my 
-code in github.Comments and suggestions are warmly welcomed.
+code in github. Comments and suggestions are warmly welcomed.
