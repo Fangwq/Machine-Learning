@@ -26,7 +26,7 @@ def predict(x,y,theta):
 	z0=np.dot(theta,x.T)
 	result=g(z0).T
 	# predict_y=np.amax(result, axis=1)  #the largest number in each row
-	predict_y=np.argmax(result,axis=1)+1 #the 
+	predict_y=np.argmax(result,axis=1)+1 #the large nuber index in each row
 	# print predict_y
 	p=sum(predict_y==y)
 	return 1.0*p/N
