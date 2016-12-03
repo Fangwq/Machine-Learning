@@ -97,7 +97,7 @@ def predict(x,y,theta):
 
 #optimization algorithm to find best weight
 def fmincg(x,y,initial_theta,para):
-	max_iter=10000
+	max_iter=100
 	theta=initial_theta
 	costJ=np.zeros([1,max_iter])
 	stepsize=np.zeros([1,max_iter])
