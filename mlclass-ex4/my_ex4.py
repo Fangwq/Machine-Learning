@@ -25,9 +25,7 @@ test_theta=np.hstack([a,b])[0] #it is an array with shape(10028,)
 alpha=1.0   #the parameter lambda
 print J(xdata,ydata,test_theta,alpha)  
 #=======================initialize the theta weight between the layers=====================
-#with random weight, the output is different at each time.
-#The learning rate maybe very important, and sometimes this code 
-#doesn't get the right answer. The random initial maybe the problem.
+#with random weight, the output is a little different at each time.
 rand=0.12
 initial_theta1=np.random.rand(m1,n1)*2.0*rand-rand
 initial_theta2=np.random.rand(m2,n2)*2.0*rand-rand
