@@ -88,6 +88,7 @@ def gradient_J(x,y,theta,para):
 	err2=temp[0:,1:]*grad_g(rz2)
 	G1=G1+eta*np.dot(err2.T,ra1add)
 	G2=G2+eta*np.dot(err3.T,ra2add)
+	
 	grad_theta1=G1/N+para*np.hstack([np.array([[0.0]*len(temp_theta1[0:,1:])]).T,temp_theta1[0:,1:]])/N
 	grad_theta2=G2/N+para*np.hstack([np.array([[0.0]*len(temp_theta2[0:,1:])]).T,temp_theta2[0:,1:]])/N
 	return np.hstack([grad_theta1.reshape(1,m1*n1),grad_theta2.reshape(1,m2*n2)])[0]
